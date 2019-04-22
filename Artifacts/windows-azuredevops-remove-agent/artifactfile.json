@@ -33,6 +33,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./run.ps1',' -PersonalAccessToken ', parameters('PersonalAccessToken'), ' -AgentInstallName', parameters('AgentName'), ' -AgentInstallLocation ', parameters('AgentInstallLocation'), '''\"')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./run.ps1',' -PersonalAccessToken ', parameters('PersonalAccessToken'), ' -AgentName', parameters('AgentName'), ' -AgentInstallLocation ', parameters('AgentInstallLocation'), '''\"')]"
     }
 }

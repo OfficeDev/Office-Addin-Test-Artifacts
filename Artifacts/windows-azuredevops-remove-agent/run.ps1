@@ -106,7 +106,7 @@ try {
 
         # Call the agent with the configure command and all the options (this creates the settings file) without prompting
         # the user or blocking the cmd execution
-        Write-Output "Configuring agent '$($Agent)'"
+        Write-Output "Configuring agent '$($AgentName)'"
         .\config.cmd remove --unattended --auth PAT --token $PersonalAccessToken
         Test-LastExitCode
 
