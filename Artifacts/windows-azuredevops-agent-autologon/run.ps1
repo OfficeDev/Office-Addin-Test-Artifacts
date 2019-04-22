@@ -29,7 +29,7 @@ Param
     [string]$AutoLogonAccount,
 
     [Parameter()]
-    [string]$AutoLogonPassword,
+    [string]$AutoLogonPassword
 )
 
 ###################################################################################################
