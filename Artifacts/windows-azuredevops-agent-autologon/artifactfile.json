@@ -56,13 +56,13 @@
         },
         "AutoLogonAccount": {
             "type": "string",
-            "displayNamer": "User account to use for auto-logon",
+            "displayName": "User account to use for auto-logon",
             "description": "User account to use to auto-logon to Windows",
             "allowEmpty": true
         },
         "AutoLogonPassword": {
             "type": "string",
-            "displayNamer": "User password for auto-logon",
+            "displayName": "User password for auto-logon",
             "description": "User password to use to auto-logon to Windows",
             "allowEmpty": true
         }

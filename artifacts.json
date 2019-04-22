@@ -1,0 +1,31 @@
+[
+  {
+    "artifactId": "/artifactSources/privaterepo16/artifacts/windows-azuredevops-agent-autologon",
+    "parameters": [
+      {
+        "name": "Account",
+        "value": "office"
+      },
+      {
+        "name": "PersonalAccessToken",
+        "value": "gu2twtimh4b6naaniuxf5l6ajo2c4ra2f52vghg567nfb2bk7lda"
+      },
+      {
+        "name": "PoolName",
+        "value": "OPX Windows Dogfood Pool"
+      },
+      {
+        "name": "AutoLogonAccount",
+        "value": "opx-azure-01\\opxadmin"
+      },
+      {
+        "name": "AutoLogonPassword",
+        "value": "HelloWorld1!"
+      },
+      {
+        "name": "Overwrite",
+        "value": "true"
+      }
+    ]
+  } 
+]
