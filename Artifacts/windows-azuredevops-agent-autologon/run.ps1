@@ -17,9 +17,6 @@ Param
     [string]$AgentInstallLocation,
 
     [Parameter()]
-    [string]$AgentNamePrefix,
-
-    [Parameter()]
     [string]$PoolName,
 
     [Parameter()]
