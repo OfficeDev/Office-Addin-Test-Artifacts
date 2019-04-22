@@ -11,7 +11,7 @@ Param
     [string]$AgentName,
 
     [Parameter()]
-    [string]$AgentInstallLocation,
+    [string]$AgentInstallLocation
 )
 
 ###################################################################################################
