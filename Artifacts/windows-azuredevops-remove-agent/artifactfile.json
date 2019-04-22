@@ -1,0 +1,38 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2016-11-28/dtlArtifacts.json",
+    "title": "Azure Pipelines Agent - Remove Agent",
+    "publisher": "Courtney Owen",
+    "description": "Downloads latest Azure Pipelines agent for the account, and installs the specified number instances of the agents inside one Windows VM. Registers the agent with the Azure DevOps account, and adds agents to the specified agent pool. Note - If the specified agent folder already exists it will be overwritten.",
+    "tags": [
+        "Azure DevOps",
+        "Pipelines",
+        "Release",
+        "Build",
+        "CI",
+        "Windows"
+    ],
+    "iconUri": "https://cdn.vsassets.io/content/icons/favicon.ico",
+    "targetOsType": "Windows",
+    "parameters": {
+        "PersonalAccessToken": {
+            "type": "securestring",
+            "displayName": "Azure DevOps Personal Access Token",
+            "description": "A personal access token with permissions to remove build agents."
+        },
+        "AgentName": {
+            "type": "string",
+            "displayName": "Agent Name",
+            "description": "The name to give to the agent, as seen by Azure DevOps. If empty, the computer name will be used.",
+            "allowEmpty": true
+        },
+        "AgentInstallLocation": {
+            "type": "string",
+            "displayName": "Agent Install Location",
+            "description": "Install location for the agent(s)",
+            "defaultValue": "c:\\agents"
+        }
+    },
+    "runCommand": {
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./run.ps1',' -PersonalAccessToken ', parameters('PersonalAccessToken'), ' -AgentInstallName', parameters('AgentName'), ' -AgentInstallLocation ', parameters('AgentInstallLocation'), '''\"')]"
+    }
+}
