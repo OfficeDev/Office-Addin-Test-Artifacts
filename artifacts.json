@@ -14,6 +14,10 @@
         "name": "PoolName",
         "value": "OPX Windows Dogfood Pool"
       },
+    {
+        "name": "AgentName",
+        "value": "opx-azure-01"
+    },
       {
         "name": "AutoLogonAccount",
         "value": "opx-azure-01\\opxadmin"

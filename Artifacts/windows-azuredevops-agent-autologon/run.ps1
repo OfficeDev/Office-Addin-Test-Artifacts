@@ -206,7 +206,6 @@ try {
         # Call the agent with the configure command and all the options (this creates the settings file) without prompting
         # the user or blocking the cmd execution
         Write-Output "Configuring agent '$($Agent)'"
-        if ()	
         .\config.cmd --unattended --url $serverUrl --auth PAT --token $PersonalAccessToken --pool $PoolName --agent $Agent --runAsAutoLogon --windowsLogonAccount $AutoLogonAccount --windowsLogonPassword $AutoLogonPassword
         Test-LastExitCode
 
