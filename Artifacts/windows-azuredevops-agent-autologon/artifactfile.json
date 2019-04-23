@@ -61,6 +61,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./run.ps1',' -Account ', parameters('Account'), ' -PersonalAccessToken ', parameters('PersonalAccessToken'), ' -AgentName ''', parameters('AgentName'), ''' -PoolName ''', parameters('PoolName'),  ''' -AutoLogonAccount ''', parameters('AutoLogonAccount'), ''' -AutoLogonPassword ''', parameters('AutoLogonPassword'), '''\"')]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass \"& ./run.ps1',' -Account ', parameters('Account'), ' -PersonalAccessToken ', parameters('PersonalAccessToken'), ' -AgentName ''', parameters('AgentName'), ''' -PoolName ''', parameters('PoolName'),  ''' -AutoLogonAccount ''', parameters('AutoLogonAccount'), ''' -AutoLogonPassword ''', parameters('AutoLogonPassword'), ''' -Overwrite ''', parameters('Overwrite'), '''\"')]"
     }
 }
