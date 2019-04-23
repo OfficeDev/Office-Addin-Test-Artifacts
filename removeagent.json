@@ -1,0 +1,19 @@
+[
+    {
+        "artifactId": "/artifactSources/privaterepo16/artifacts/windows-azuredevops-remove-agent",
+        "parameters": [
+            {
+                "name": "PersonalAccessToken",
+                "value": "gu2twtimh4b6naaniuxf5l6ajo2c4ra2f52vghg567nfb2bk7lda"
+            },
+            {
+                "name": "AgentName",
+                "value": "opx-azure-01"
+            },
+            {
+                "name": "AgentLocation",
+                "value": "c:\\agent"
+            }
+        ]
+    }
+]
