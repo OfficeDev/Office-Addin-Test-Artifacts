@@ -168,7 +168,6 @@ try {
 
         $Agent = $AgentName;
 
-
         # Construct the agent folder under the main (hardcoded) C: drive.
         $agentInstallationPath = Join-Path $AgentInstallLocation $Agent
 

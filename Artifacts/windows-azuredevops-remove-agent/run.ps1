@@ -5,7 +5,7 @@
 Param
 (
     [Parameter()]
-    [String]$PersonalAccessToken
+    [String]$PersonalAccessToken,
 
     [Parameter()]
     [string]$AgentName,
@@ -89,28 +89,23 @@ try {
         $AgentInstallLocation = "c:\agents";
     }
 
-    $retryCount = 3
-    $retries = 1
+    # Construct the agent folder under the main (hardcoded) C: drive.
+    $agentInstallationPath = Join-Path $AgentInstallLocation $AgentName
 
-    while ($retries -le $retryCount)
+    # Retrieve the path to the config.cmd file.
+    $agentConfigPath = [System.IO.Path]::Combine($agentInstallationPath, 'config.cmd')
+    Write-Output "Agent Location = $agentConfigPath" 
+    if (![System.IO.File]::Exists($agentConfigPath)) {
+        throw "File not found: $agentConfigPath"
+    }
 
-        # Construct the agent folder under the main (hardcoded) C: drive.
-        $agentInstallationPath = Join-Path $AgentInstallLocation $AgentName
+    # Call the agent with the configure command and all the options (this creates the settings file) without prompting
+    # the user or blocking the cmd execution
+    Write-Output "Configuring agent '$($AgentName)'"
+    .\config.cmd remove --unattended --auth PAT --token $PersonalAccessToken
+    Test-LastExitCode
 
-        # Retrieve the path to the config.cmd file.
-        $agentConfigPath = [System.IO.Path]::Combine($agentInstallationPath, 'config.cmd')
-        Write-Output "Agent Location = $agentConfigPath" 
-        if (![System.IO.File]::Exists($agentConfigPath)) {
-            throw "File not found: $agentConfigPath"
-        }
-
-        # Call the agent with the configure command and all the options (this creates the settings file) without prompting
-        # the user or blocking the cmd execution
-        Write-Output "Configuring agent '$($AgentName)'"
-        .\config.cmd remove --unattended --auth PAT --token $PersonalAccessToken
-        Test-LastExitCode
-
-        Pop-Location
+    Pop-Location
 
     Write-Output "Exiting RemoveAgent.ps1" 
 }
