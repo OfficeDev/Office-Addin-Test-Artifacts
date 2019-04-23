@@ -4,27 +4,27 @@
     "parameters": [
       {
         "name": "Account",
-        "value": "office"
+        "value": "<Project_Name>"
       },
       {
         "name": "PersonalAccessToken",
-        "value": "gu2twtimh4b6naaniuxf5l6ajo2c4ra2f52vghg567nfb2bk7lda"
+        "value": "<PAT_Token>"
       },
       {
         "name": "PoolName",
-        "value": "OPX Windows Dogfood Pool"
+        "value": "<Agent_Pool_Name>"
       },
     {
         "name": "AgentName",
-        "value": "opx-azure-01"
+        "value": "<Machine_Name>"
     },
       {
         "name": "AutoLogonAccount",
-        "value": "opx-azure-01\\opxadmin"
+        "value": "<Local_Admin_Account>"
       },
       {
         "name": "AutoLogonPassword",
-        "value": "HelloWorld1!"
+        "value": "<Local_Admin_Account_Password>"
       },
       {
         "name": "Overwrite",

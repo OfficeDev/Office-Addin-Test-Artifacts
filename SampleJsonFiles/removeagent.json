@@ -4,15 +4,15 @@
         "parameters": [
             {
                 "name": "PersonalAccessToken",
-                "value": "gu2twtimh4b6naaniuxf5l6ajo2c4ra2f52vghg567nfb2bk7lda"
+                "value": "<PAT_Token>"
             },
             {
                 "name": "AgentName",
-                "value": "opx-azure-01"
+                "value": "<Agent_Name>"
             },
             {
                 "name": "AgentLocation",
-                "value": "c:\\agent"
+                "value": "<Agent_Directory_Location>"
             }
         ]
     }
