@@ -167,9 +167,11 @@ try {
     while ($retries -le $retryCount)
 
         $Agent = $AgentName;
+        Write-Output "Agent name is '$($Agent)'"
 
         # Construct the agent folder under the main (hardcoded) C: drive.
         $agentInstallationPath = Join-Path $AgentInstallLocation $Agent
+        Write-Output "Agent install location is '$($agentInstallationPath)'"
 
         #Test if the directory already exist, which probably means agent also exists
         if (-not $Overwrite -and (Test-Path $agentInstallationPath)) {
