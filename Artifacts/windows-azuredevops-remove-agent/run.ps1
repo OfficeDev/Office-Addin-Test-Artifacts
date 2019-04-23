@@ -83,7 +83,7 @@ try {
         throw "PersonalAccessToken parameter is required."
     }
     if ([string]::IsNullOrWhiteSpace($AgentName)) {
-        throw "AgentName parameter is required."
+        $AgentName = $env:COMPUTERNAME
     }
     if ([string]::IsNullOrWhiteSpace($AgentInstallLocation)) {
         $AgentInstallLocation = "c:\agents";
