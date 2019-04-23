@@ -92,6 +92,9 @@ try {
     # Construct the agent folder under the main (hardcoded) C: drive.
     $agentInstallationPath = Join-Path $AgentInstallLocation $AgentName
 
+    # Set the current directory to the agent dedicated one previously created.
+    Push-Location -Path $agentInstallationPath
+
     # Retrieve the path to the config.cmd file.
     $agentConfigPath = [System.IO.Path]::Combine($agentInstallationPath, 'config.cmd')
     Write-Output "Agent Location = $agentConfigPath" 
@@ -112,8 +115,6 @@ try {
 catch {
     $exceptionText = ($_ | Out-String).Trim()
     Write-Output "Exception occured while removing agent: $exceptionText" 
-    $retries++
-    Start-Sleep -Seconds 30 
 }
 finally {
     Pop-Location
