@@ -109,6 +109,12 @@ try {
 
     Write-Output "Exiting RemoveAgent.ps1" 
 }
+catch {
+    $exceptionText = ($_ | Out-String).Trim()
+    Write-Output "Exception occured while removing agent: $exceptionText" 
+    $retries++
+    Start-Sleep -Seconds 30 
+}
 finally {
     Pop-Location
 }
